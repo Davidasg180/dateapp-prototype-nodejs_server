@@ -3,15 +3,15 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>dateapp-prototype-server</Name>
-    <RootNamespace>dateapp-prototype-server</RootNamespace>
+    <Name>dateapp-prototype-nodejs_server</Name>
+    <RootNamespace>dateapp-prototype-nodejs_server</RootNamespace>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>c58945dc-6ba9-413f-9576-e7bd0d6ce901</ProjectGuid>
+    <ProjectGuid>a4479f90-5631-497c-97d4-0e7e37d6de9b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>app.js</StartupFile>
     <SearchPath>
@@ -21,7 +21,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,22 +31,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="app\app.js" />
+    <Compile Include="app\config\index.js" />
+    <Compile Include="app\graphql\schema.js" />
+    <Compile Include="app\helpers\global_functions.js" />
+    <Compile Include="app\helpers\index.js" />
+    <Compile Include="app\index.js" />
+    <Compile Include="app\middleware\express-jwt.js" />
+    <Compile Include="app\middleware\index.js" />
+    <Compile Include="app\middleware\morgan.js" />
+    <Compile Include="app\models\index.js" />
+    <Compile Include="app\models\product.model.js" />
+    <Compile Include="app\models\user.model.js" />
+    <Compile Include="app\routes\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="app\graphql\schema" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
-    <Content Include="views\index.pug" />
-    <Content Include="views\layout.pug" />
-    <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="public\" />
-    <Folder Include="public\images\" />
-    <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
-    <Folder Include="routes\" />
-    <Folder Include="views\" />
+    <Folder Include="app\" />
+    <Folder Include="app\config\" />
+    <Folder Include="app\graphql\" />
+    <Folder Include="app\helpers\" />
+    <Folder Include="app\middleware\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\routes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />

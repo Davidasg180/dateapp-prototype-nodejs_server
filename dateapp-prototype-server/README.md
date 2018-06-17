@@ -1,3 +1,0 @@
-﻿# dateapp-prototype-server
-
-

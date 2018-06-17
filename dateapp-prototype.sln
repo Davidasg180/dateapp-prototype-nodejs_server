@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dateapp-prototype-server", "dateapp-prototype-server\dateapp-prototype-server.njsproj", "{C58945DC-6BA9-413F-9576-E7BD0D6CE901}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dateapp-prototype-nodejs_server", "dateapp-prototype-nodejs_server\dateapp-prototype-nodejs_server.njsproj", "{A4479F90-5631-497C-97D4-0E7E37D6DE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C58945DC-6BA9-413F-9576-E7BD0D6CE901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C58945DC-6BA9-413F-9576-E7BD0D6CE901}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C58945DC-6BA9-413F-9576-E7BD0D6CE901}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C58945DC-6BA9-413F-9576-E7BD0D6CE901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4479F90-5631-497C-97D4-0E7E37D6DE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4479F90-5631-497C-97D4-0E7E37D6DE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4479F90-5631-497C-97D4-0E7E37D6DE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4479F90-5631-497C-97D4-0E7E37D6DE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D761D3BD-1115-4D01-AA64-F5DC677C4C72}
+		SolutionGuid = {CFA66CF7-C4FA-4F03-A389-FBA03924242D}
 	EndGlobalSection
 EndGlobal
