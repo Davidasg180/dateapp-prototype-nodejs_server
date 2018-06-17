@@ -8,29 +8,24 @@ const { buildSchema } = require('graphql');
 const middleware = require('./middleware');
 const jwt = require('express-jwt');
 
+const models = require('./models');
+const schema = require('./graphql');
+const routes = require('./routes');
+
 const app = express();
 
 app.use(middleware);
 
-const models = require('./models');
-const routes = require('./routes');
-
 app.use('/', routes);
-
-let schema = buildSchema(`
-    type Query {
-        message : String
-    }
-`);
 
 let rootValue = {
     message: () => middleware
-}
+};
 
-app.use('/Graphql', express_graph({
+app.use('/graphiql', express_graph({
     schema,
-    rootValue,
+    pretty: true,
     graphiql: true
-}))
+}));
 
 module.exports = app;

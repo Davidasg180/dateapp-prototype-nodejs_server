@@ -13,7 +13,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a4479f90-5631-497c-97d4-0e7e37d6de9b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>index.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,10 +30,16 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="index.js" />
     <Compile Include="app\app.js" />
     <Compile Include="app\config\index.js" />
-    <Compile Include="app\graphql\schema.js" />
+    <Compile Include="app\graphql\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\graphql\rootSchema.js" />
+    <Compile Include="app\graphql\StarWarsCharacters.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\helpers\global_functions.js" />
     <Compile Include="app\helpers\index.js" />
     <Compile Include="app\index.js" />
@@ -46,7 +52,6 @@
     <Compile Include="app\routes\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="app\graphql\schema" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
