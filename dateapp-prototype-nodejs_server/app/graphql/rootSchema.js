@@ -5,7 +5,12 @@ const schema = new graphql.GraphQLSchema({
     query: new graphql.GraphQLObjectType({
         name: `Query`,
         fields: {
-            starWarsCharacters
+            myNewField: {
+                type: graphql.String,
+                resolve: function () {
+                    return 'Hello world!';
+                }
+            }
         }
     })
 });

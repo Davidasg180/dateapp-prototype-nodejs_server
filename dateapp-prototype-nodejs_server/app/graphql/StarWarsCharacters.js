@@ -20,9 +20,11 @@ starWarsCharactersObj = {
     resolve: (root, args) => {
         return {
             id: '1',
-            name: 'bulbasaur',
+            name: 'bulbasaurs',
+            gender:"male",
             order: 1,
-            sprites: {
+            product: "test",
+            url: {
                 front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
             }
         };
