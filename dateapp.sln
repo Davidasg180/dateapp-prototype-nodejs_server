@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dateapp-prototype-nodejs_server", "dateapp-prototype-nodejs_server\dateapp-prototype-nodejs_server.njsproj", "{A4479F90-5631-497C-97D4-0E7E37D6DE9B}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dateapp-server", "dateapp-prototype-nodejs_server\dateapp-server.njsproj", "{A4479F90-5631-497C-97D4-0E7E37D6DE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
