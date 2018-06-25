@@ -1,16 +1,19 @@
-const graphql = require('graphql');
-const starWarsCharacters = require('./starWarsCharacters');
+const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql');
+const { userLogIn, userSignIn } = require(`./objects/auth.obj`);
+const users  = require(`./objects/user.obj`);
 
-const schema = new graphql.GraphQLSchema({
-    query: new graphql.GraphQLObjectType({
+const schema = new GraphQLSchema({
+    query: new GraphQLObjectType({
         name: `Query`,
         fields: {
-            myNewField: {
-                type: graphql.String,
-                resolve: function () {
-                    return 'Hello world!';
-                }
-            }
+            userLogIn,
+            users
+        }
+    }),
+    mutation: new GraphQLObjectType({
+        name: `Mutation`,
+        fields: {
+            userSignIn
         }
     })
 });

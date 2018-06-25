@@ -30,6 +30,13 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\graphql\objects\auth.obj.js" />
+    <Compile Include="app\graphql\objects\user.obj.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\graphql\types\auth.type.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="index.js" />
     <Compile Include="app\app.js" />
     <Compile Include="app\config\index.js" />
@@ -37,7 +44,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\graphql\rootSchema.js" />
-    <Compile Include="app\graphql\StarWarsCharacters.js">
+    <Compile Include="app\graphql\types\user.type.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\helpers\global_functions.js" />
@@ -59,6 +66,8 @@
     <Folder Include="app\" />
     <Folder Include="app\config\" />
     <Folder Include="app\graphql\" />
+    <Folder Include="app\graphql\objects\" />
+    <Folder Include="app\graphql\types\" />
     <Folder Include="app\helpers\" />
     <Folder Include="app\middleware\" />
     <Folder Include="app\models\" />

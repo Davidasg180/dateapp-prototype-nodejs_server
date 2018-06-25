@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const express_graph = require('express-graphql');
 const { buildSchema } = require('graphql');
 const middleware = require('./middleware');
-const jwt = require('express-jwt');
 
 const models = require('./models');
 const schema = require('./graphql');
