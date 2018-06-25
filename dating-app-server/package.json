@@ -1,5 +1,5 @@
 {
-  "name": "dateapp-prototype-nodejs_server",
+  "name": "dating-app-server",
   "version": "0.0.0",
   "private": true,
   "scripts": {
