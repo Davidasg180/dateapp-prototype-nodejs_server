@@ -1,8 +1,10 @@
-﻿const { GraphQLObjectType, GraphQLString } = require(`graphql`);
+﻿const { GraphQLObjectType, GraphQLList, GraphQLString } = require(`graphql`);
 const userType = require(`./../types/user.type`);
 
+const User = require(`./../../models`).User;
+
 users = {
-    type: userType,
+    type: new GraphQLList(userType),
 
     args: {
         email: {
@@ -14,10 +16,7 @@ users = {
     },
 
     resolve: (root, args) => {
-        return {
-                email: "testemail",
-                password: "testpass"
-        }
+        return User.find();
     }
 }
 

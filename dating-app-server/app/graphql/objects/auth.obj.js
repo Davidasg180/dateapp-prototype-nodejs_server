@@ -1,6 +1,8 @@
 ﻿const { GraphQLObjectType, GraphQLString } = require(`graphql`);
 const authType = require(`../types/auth.type`);
+
 const bcrypt = require(`bcryptjs`);
+const jwt = require(`jsonwebtoken`);
 
 const User = require(`./../../models`).User;
 
@@ -13,7 +15,7 @@ userLogIn = {
         },
         password: {
             type: GraphQLString
-        },
+        }
     },
 
     resolve: (root, args) => {
@@ -23,9 +25,9 @@ userLogIn = {
                 email: "testemail",
                 password: "testpass"
             }
-        }
+        };
     }
-}
+};
 
 
 
@@ -38,23 +40,28 @@ userSignIn = {
         },
         password: {
             type: GraphQLString
-        },
+        }
     },
 
     resolve: (root, args) => {
+
         let userData = {
             email: args.email,
-            password: bcrypt.hashSync(args.password, 8)
+            password: bcrypt.hashSync(args.password, 10)
         }
 
-        user = User.create(userData);
+        return User.create(userData).then(user => {
 
-        return {
-            token: "dksjakldjqwjdas",
-            user
-        }
+            let token = jwt.sign({ id: user._id }, CONFIG.jwt_encryption, {
+                expiresIn: CONFIG.jwt_expiration
+            });
 
-        
+            return {
+                token,
+                user
+            }
+
+        });
     }
 }
 

@@ -5,7 +5,8 @@ const mongoose = require( "mongoose");
 const basename = path.basename(__filename);
 
 let models = {}
-if(CONFIG.db_host != ''){
+if (CONFIG.db_host != '') {
+    //Fetchs all files in models and exported
     var files = fs
                 .readdirSync(__dirname)
                 .filter(file => {
@@ -24,7 +25,7 @@ if(CONFIG.db_host != ''){
     
     mongoose.Promise = global.Promise;
     
-    mongoose.connect('mongodb://localhost/dateapp').catch(error => { 
+    mongoose.connect(`mongodb://` + CONFIG.db_host + `/` + CONFIG.db_name).catch(error => { 
         console.log('*** Can not connect to mongo server:' + error);
     });
     
@@ -33,7 +34,12 @@ if(CONFIG.db_host != ''){
     module.exports = db;
 
     db.once('open', () => {
-        console.log('connected to mongodb Yays!');
+        console.log(`
+                |==========================================|
+                |--------Connected to Mongodb Yays!--------|
+                |--------`+ `mongodb://localhost/` + CONFIG.db_name+`--------|
+                |==========================================|
+        `);
     });
     
     db.on('error', error => {
