@@ -5,7 +5,10 @@ let userType = new GraphQLObjectType({
     fields: {
         _id: { type: GraphQLString },
         email: { type: GraphQLString },
-        password: { type: GraphQLString },
+        password: {
+            type: GraphQLString,
+            resolve: () => null
+        }
     },
 
 });

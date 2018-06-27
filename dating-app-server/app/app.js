@@ -4,7 +4,7 @@ require('./helpers');
 const express = require('express');
 const mongoose = require('mongoose');
 const express_graph = require('express-graphql');
-const { buildSchema } = require('graphql');
+const { buildSchema, graphqlHTTP } = require('graphql');
 const middleware = require('./middleware');
 
 const models = require('./models');
@@ -21,10 +21,23 @@ let rootValue = {
     message: () => middleware
 };
 
-app.use('/graphiql', express_graph({
+app.use('/graphiql', express_graph(request => ({
     schema,
+    context: {
+        request,
+        test: 'Example context value'
+    },
     pretty: true,
     graphiql: true
-}));
+})));
+
+app.use(`/api`, express_graph(request => ({
+            schema,
+            context: {
+                request
+            }
+        })
+    )
+)
 
 module.exports = app;

@@ -19,13 +19,23 @@ userLogIn = {
     },
 
     resolve: (root, args) => {
-        return {
-            token: "testtoekn",
-            user: {
-                email: "testemail",
-                password: "testpass"
+        console.log("Resolve: userLogIn");
+        return User.findOne({ email: args.email }).then(user => {
+
+            let passwordIsValid = bcrypt.compareSync(args.password, user.password);
+
+            if (!passwordIsValid) throw new Error('Unavailable in your country.');
+
+            let token = jwt.sign({ id: user._id }, CONFIG.jwt_encryption, {
+                expiresIn: CONFIG.jwt_expiration
+            });
+
+            return {
+                token,
+                user
             }
-        };
+
+        }).catch(e => console.log(e));
     }
 };
 
