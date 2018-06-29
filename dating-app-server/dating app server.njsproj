@@ -38,6 +38,9 @@
     <Compile Include="app\graphql\types\auth.type.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\models\place.model.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="index.js" />
     <Compile Include="app\app.js" />
     <Compile Include="app\config\index.js" />
@@ -55,7 +58,6 @@
     <Compile Include="app\middleware\index.js" />
     <Compile Include="app\middleware\morgan.js" />
     <Compile Include="app\models\index.js" />
-    <Compile Include="app\models\product.model.js" />
     <Compile Include="app\models\user.model.js" />
     <Compile Include="app\routes\index.js">
       <SubType>Code</SubType>
