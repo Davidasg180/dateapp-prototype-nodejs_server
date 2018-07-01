@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import {
-    Link,
     Route,
     Switch,
     BrowserRouter as Router
-} from 'react-router-dom'
+} from 'react-router-dom';
 
+import SideBar from './components/SideBar';
 import MapView from './views/MapView';
+import {
+    Divider,
+    Drawer,
+    ListItem,
+    ListItemIcon,
+    ListItemText
+} from '@material-ui/core';
 
 import './App.css';
 
@@ -15,9 +22,9 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <ul>
-                        <li><Link to="/map">Map</Link></li>
-                    </ul>
+                    <div className="App">
+                        <SideBar />
+                    </div>
                     <Switch>
                         <Route
                             path="/map"
