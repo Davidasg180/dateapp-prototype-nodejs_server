@@ -7,13 +7,6 @@ import {
 
 import SideBar from './components/SideBar';
 import MapView from './views/MapView';
-import {
-    Divider,
-    Drawer,
-    ListItem,
-    ListItemIcon,
-    ListItemText
-} from '@material-ui/core';
 
 import './App.css';
 
@@ -27,8 +20,8 @@ class App extends Component {
                     </div>
                     <Switch>
                         <Route
-                            path="/map"
-                            component="MapView"
+                            path='/map'
+                            component={MapView}
                         />
                     </Switch>
                 </div>

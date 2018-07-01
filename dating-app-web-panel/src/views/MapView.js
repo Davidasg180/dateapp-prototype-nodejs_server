@@ -1,10 +1,19 @@
-﻿import React, { Component } from 'react';
+﻿import React, { Component } from "react";
+import GoogleMapReact from "google-map-react";
 
-class MapView extends Comment {
+
+
+class MapView extends Component {
     render() {
         return (
-            <div>
-                <h1>Hello im MapView</h1>
+            <div style={{ height: '100vh', width: '100%' }}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: "AIzaSyAIyzlkI6OuL4pAHIAqarKJTr8VSVBmmKE" }}
+                    defaultCenter={{ lat: 59.95, lng: 30.33 }}
+                    defaultZoom={11}
+                >
+
+                </GoogleMapReact>
             </div>
         );
     }

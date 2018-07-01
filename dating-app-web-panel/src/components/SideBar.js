@@ -1,4 +1,4 @@
-﻿import React ,{ Component } from "react";
+﻿import React, { Component } from "react";
 
 import {
     Link
@@ -6,7 +6,6 @@ import {
 
 import {
     ListItem,
-    ListItemText,
     Drawer
 } from "@material-ui/core";
 
@@ -19,16 +18,10 @@ class SideBar extends Component {
                 anchor="left"
             >
                 <ListItem button>
+                    <Link to="/">Home</Link>
+                </ListItem>
+                <ListItem button>
                     <Link to="/map">Map</Link>
-                </ListItem>
-                <ListItem button>
-                    <ListItemText primary="Starred" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemText primary="Send mail" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemText primary="Drafts" />
                 </ListItem>
             </Drawer>
         );
