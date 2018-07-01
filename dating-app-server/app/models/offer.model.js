@@ -1,7 +1,10 @@
-const { Schema, model } = require(`mongoose`);
+const mongoose = require(`mongoose`);
+const Schema = mongoose.Schema;
 
-offerSchema = Schema({
-
+let offerSchema = new Schema({
+    name: {
+        type: String
+    }
 });
 
-module.exports = model(`Offer`,offerSchema);
+module.exports = mongoose.model(`Offer`,offerSchema);
