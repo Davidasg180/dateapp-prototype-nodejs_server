@@ -9,13 +9,11 @@ import {
     Drawer
 } from "@material-ui/core";
 
-
 class SideBar extends Component {
     render() {
         return (
             <Drawer
-                variant="permanent"
-                anchor="left"
+                open={true}
             >
                 <ListItem button>
                     <Link to="/">Home</Link>
