@@ -9,11 +9,24 @@ import {
     Drawer
 } from "@material-ui/core";
 
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+    drawerPaper: {
+        position: 'relative',
+        width: 250,
+    }
+}
+
 class SideBar extends Component {
+
     render() {
         return (
             <Drawer
-                open={true}
+                variant="permanent"
+                classes={{
+                    paper: this.props.classes.drawerPaper,
+                }}
             >
                 <ListItem button>
                     <Link to="/">Home</Link>
@@ -26,4 +39,4 @@ class SideBar extends Component {
     }
 }
 
-export default SideBar;
+export default withStyles(styles)(SideBar);

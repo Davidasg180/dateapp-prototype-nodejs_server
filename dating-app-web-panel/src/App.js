@@ -11,20 +11,32 @@ import MapView from './views/MapView';
 import './App.css';
 import LoginView from './views/LoginView';
 
-const root = {
-    flexGrow: 1
-};
+import {
+    Link
+} from "react-router-dom";
 
 class App extends Component {
     render() {
-        const contentStyle = { transition: 'margin-left 450ms cubic-bezier(0.23, 1, 0.32, 1)' };
+
+        let appFrame = {
+            height: 430,
+            zIndex: 1,
+            overflow: 'hidden',
+            position: 'relative',
+            display: 'flex',
+            width: '100%',
+        }
+
+        let mainContent = {
+            flexGrow: 1,
+        }
 
         return (
             <Router>
-                <div className={root}>
+                <div style={appFrame}>
                     <SideBar />
-                    <div style={contentStyle}>
-                    <h1>hello</h1>
+                    <div style={mainContent} >
+                        <h1>hello</h1>
                         <Switch>
                             <Route
                                 path='/map'
@@ -42,4 +54,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default (App);
