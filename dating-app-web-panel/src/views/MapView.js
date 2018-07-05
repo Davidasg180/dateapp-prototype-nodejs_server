@@ -9,10 +9,9 @@ class MapView extends Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyAIyzlkI6OuL4pAHIAqarKJTr8VSVBmmKE" }}
-                    defaultCenter={{ lat: 59.95, lng: 30.33 }}
-                    defaultZoom={11}
+                    defaultCenter={{ lat: 32.502700, lng: -117.003710 }}
+                    defaultZoom={13}
                 >
-
                 </GoogleMapReact>
             </div>
         );
