@@ -4,30 +4,24 @@ import {
     Switch,
 } from 'react-router-dom';
 
-import SideBar from './components/SideBar';
-import MapView from './views/MapView';
+import LoginView from './pages/LoginPage/LoginPage';
+import HomePage from './pages/HomePage/HomePage';
 
 import './App.css';
-import LoginView from './views/LoginView';
-
-import {
-    Link
-} from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <SideBar />
                 <main>
                     <Switch>
-                        <Route
-                            path='/map'
-                            component={MapView}
-                        />
-                        <Route
+                    <Route
                             path='/login'
                             component={LoginView}
+                        />
+                        <Route
+                            path='/'
+                            component={HomePage}
                         />
                     </Switch>
                 </main>
