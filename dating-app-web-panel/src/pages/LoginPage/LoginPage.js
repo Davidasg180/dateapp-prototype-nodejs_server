@@ -4,7 +4,7 @@ import {
     Button
 } from '@material-ui/core';
 
-class LoginView extends Component {
+class LoginPage extends Component {
     state = {}
     render() {
         return (
@@ -35,4 +35,4 @@ class LoginView extends Component {
     }
 }
 
-export default LoginView;
+export default LoginPage;

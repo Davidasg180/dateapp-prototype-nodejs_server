@@ -16,14 +16,12 @@ class HomePage extends Component {
         return (
             <div className="App">
                 <SideBar />
-                <main>
-                    <Switch>
-                        <Route
-                            path='/map'
-                            component={MapView}
-                        />
-                    </Switch>
-                </main>
+                <Switch>
+                    <Route
+                        path='/map'
+                        component={MapView}
+                    />
+                </Switch>
             </div>
         );
     }

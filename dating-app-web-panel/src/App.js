@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
+import './App.css';
+
 import {
-    Route,
+    BrowserRouter,
     Switch,
+    Route,
 } from 'react-router-dom';
 
-import LoginView from './pages/LoginPage/LoginPage';
-import HomePage from './pages/HomePage/HomePage';
-
-import './App.css';
+import Root from './pages/Root';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <main>
-                    <Switch>
+                <Switch>
                     <Route
-                            path='/login'
-                            component={LoginView}
-                        />
-                        <Route
-                            path='/'
-                            component={HomePage}
-                        />
-                    </Switch>
-                </main>
+                        exact
+                        path='/login'
+                        component={LoginPage}
+                    />
+                    <Route
+                        path='/'
+                        component={Root}
+                    />
+                </Switch>
             </div>
         );
     }

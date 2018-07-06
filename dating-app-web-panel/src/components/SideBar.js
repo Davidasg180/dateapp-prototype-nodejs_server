@@ -32,6 +32,9 @@ class SideBar extends Component {
                     <Link to="/">Home</Link>
                 </ListItem>
                 <ListItem button>
+                    <Link to="/users">Users</Link>
+                </ListItem>
+                <ListItem button>
                     <Link to="/map">Map</Link>
                 </ListItem>
             </Drawer>

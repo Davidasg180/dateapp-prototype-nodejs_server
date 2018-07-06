@@ -1,9 +1,7 @@
 ﻿import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 
-
-
-class MapView extends Component {
+class MapPage extends Component {
     render() {
         return (
             <div style={{ height: '100vh', width: '100%' }}>
@@ -18,4 +16,4 @@ class MapView extends Component {
     }
 }
 
-export default MapView;
+export default MapPage;
