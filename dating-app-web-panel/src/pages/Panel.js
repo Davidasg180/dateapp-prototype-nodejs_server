@@ -8,7 +8,7 @@ import {
 import SideBar from '../components/SideBar';
 import UsersPage from './UsersPage/UsersPage';
 import MapPage from './MapPage/MapPage';
-import panelRoutes from '../assets/routes/panelRoutes';
+import panelRoutes from '../routes/panelRoutes';
 
 class Panel extends Component {
     constructor(props) {

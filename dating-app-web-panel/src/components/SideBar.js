@@ -9,8 +9,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Lock from '@material-ui/icons/Lock';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -96,6 +97,18 @@ function RoutesList(props) {
     });
 }
 
+const LogoutLink = withRouter(({ history, ...props }) => (
+    <a
+        onClick={() => {
+            localStorage.removeItem(`token`);
+            history.push('/')
+        }}
+    >
+        {props.children}
+    </a>
+))
+
+
 class MiniDrawer extends React.Component {
     state = {
         open: false
@@ -107,7 +120,6 @@ class MiniDrawer extends React.Component {
     handleDrawerClose = () => {
         this.setState({ open: false });
     };
-
     render() {
         const { classes, theme, routes } = this.props;
 
@@ -145,9 +157,19 @@ class MiniDrawer extends React.Component {
                             </List>
                         );
                     })
-
                 }
-
+                <List style={{
+                    marginTop: `auto`
+                }}>
+                    <LogoutLink>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <Lock />
+                            </ListItemIcon>
+                            <ListItemText primary='Logout' />
+                        </ListItem>
+                    </LogoutLink>
+                </List>
             </Drawer>
         );
     }

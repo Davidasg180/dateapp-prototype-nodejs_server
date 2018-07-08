@@ -23,7 +23,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="src\assets\jss\globalStyles.jsx" />
-    <Compile Include="src\assets\routes\panelRoutes.jsx">
+    <Compile Include="src\routes\panelRoutes.jsx">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\components\Card\Card.jsx" />
@@ -78,7 +78,7 @@
     <Folder Include="src" />
     <Folder Include="src\assets\images\" />
     <Folder Include="src\assets\jss\" />
-    <Folder Include="src\assets\routes\" />
+    <Folder Include="src\routes\" />
     <Folder Include="src\components\" />
     <Folder Include="src\components\Card\" />
     <Folder Include="src\components\Card\CardAvatar\" />

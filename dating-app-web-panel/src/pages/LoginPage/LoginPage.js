@@ -16,6 +16,8 @@ import CardBody from '../../components/Card/CardBody/CardBody';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
+import { withRouter, Redirect } from 'react-router-dom';
+
 const GET_LOGIN = gql`
   mutation addTodo($email: String,$password: String) {
     userLogIn(email:$email,password:$password) {
@@ -35,6 +37,13 @@ class LoginPage extends Component {
         password: `dev@correo.com`
     }
     render() {
+
+        const { history } = this.props;
+        const { from } = this.props.location.state || { from: { pathname: '/' } }
+        if (localStorage.getItem(`token`)) {
+            return <Redirect to={from} />
+        }
+
         return (
             <AccessPanel>
                 <div className="LoginPage">
@@ -46,6 +55,7 @@ class LoginPage extends Component {
                             <Mutation mutation={GET_LOGIN}
                                 update={(cache, { data: { userLogIn } }) => {
                                     localStorage.setItem('token', userLogIn.token);
+                                    history.push(`/`);
                                 }}
                             >
                                 {(signin, { data }) => (
@@ -58,7 +68,7 @@ class LoginPage extends Component {
                                         >
                                             <Card>
                                                 <CardHeader color="primary">
-                                                    <h3 style={{ textAlign: 'center', margin: '0' }}>Login</h3>
+                                                    <h3 style={{ textAlign: 'center', margin: '0' }}>Log in</h3>
                                                 </CardHeader>
                                                 <CardBody>
                                                     <TextField
@@ -86,7 +96,7 @@ class LoginPage extends Component {
                                                     />
                                                     <Button type="submit" fullWidth color="primary">
                                                         LOGIN
-                                        </Button>
+                                                    </Button>
                                                 </CardBody>
                                             </Card>
                                         </form>
@@ -101,4 +111,4 @@ class LoginPage extends Component {
     }
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);
