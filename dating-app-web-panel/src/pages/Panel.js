@@ -8,16 +8,23 @@ import {
 import SideBar from '../components/SideBar';
 import UsersPage from './UsersPage/UsersPage';
 import MapPage from './MapPage/MapPage';
+import panelRoutes from '../assets/routes/panelRoutes';
 
-class Root extends Component {
+class Panel extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
     render() {
         return (
-            <div className="Root">
-                <SideBar />
+            <div style={{
+                width: `100%`,
+                zIndex: `1`,
+                display: `flex`,
+                overflow: `hidden`,
+                position: `relative`
+            }}>
+                <SideBar routes={panelRoutes} />
                 <main>
                     <Switch>
                         <Route
@@ -35,4 +42,4 @@ class Root extends Component {
     }
 }
 
-export default Root;
+export default Panel;

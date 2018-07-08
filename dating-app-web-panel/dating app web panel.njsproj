@@ -38,9 +38,6 @@
     <Compile Include="src\components\Card\CardIcon\CardIcon.jsx" />
     <Compile Include="src\components\Card\CardIcon\cardIconStyle.jsx" />
     <Compile Include="src\components\Card\cardStyle.jsx" />
-    <Compile Include="src\components\data.js">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="src\components\router\privateRoute.js" />
     <Compile Include="src\components\SimpleTable.js">
       <SubType>Code</SubType>

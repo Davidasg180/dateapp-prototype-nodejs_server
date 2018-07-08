@@ -7,8 +7,8 @@ import {
     Route,
 } from 'react-router-dom';
 
-import Root from './pages/Root';
 import LoginPage from './pages/LoginPage/LoginPage';
+import Panel from './pages/Panel';
 
 class App extends Component {
     render() {
@@ -21,7 +21,7 @@ class App extends Component {
                 />
                 <Route
                     path='/'
-                    component={Root}
+                    component={Panel}
                 />
             </Switch>
         );

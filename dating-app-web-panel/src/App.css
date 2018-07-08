@@ -5,9 +5,5 @@ main{
     flex-grow: 1;
 }
 .Root {
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    overflow: hidden;
-    position: relative;
+
 }

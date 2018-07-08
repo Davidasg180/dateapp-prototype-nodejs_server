@@ -7,7 +7,7 @@ import {
     Route
 } from "react-router-dom";
 
-class HomePage extends Component {
+class DashboardPage extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -27,4 +27,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default DashboardPage;
