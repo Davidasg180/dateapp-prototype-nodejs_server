@@ -12,13 +12,7 @@ const GET_USERS = gql`
     }
   }
 `;
-console.log(`userPageout`);
 class UsersPage extends Component {
-    constructor(props) {
-        super(props);
-    console.log(`userPagein`);
-    }
-
     render() {
         return (
             <Query
@@ -26,10 +20,8 @@ class UsersPage extends Component {
                 fetchPolicy="cache-and-network"
             >
                 {({ loading, error, data, refetch }) => {
-                    console.log(data)
                     if (loading) return "Loading...";
                     if (error) return `Error! ${error.message}`;
-                    console.log(data);
                     return (
                         <div>
                             <h1>Users</h1>

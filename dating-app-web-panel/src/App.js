@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 
 import {
-    BrowserRouter,
     Switch,
     Route,
 } from 'react-router-dom';
 
 import LoginPage from './pages/LoginPage/LoginPage';
 import Panel from './pages/Panel';
+import { PrivateRoute } from './components/router/privateRoute';
 
 class App extends Component {
     render() {
@@ -19,7 +19,7 @@ class App extends Component {
                     path='/login'
                     component={LoginPage}
                 />
-                <Route
+                <PrivateRoute
                     path='/'
                     component={Panel}
                 />

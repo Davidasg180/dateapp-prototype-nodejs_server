@@ -3,23 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
-import { ListItem, ListItemIcon, ListItemText, Button } from '@material-ui/core';
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -92,8 +82,8 @@ const styles = theme => ({
 function RoutesList(props) {
     return props.routes.map((prop, key) => {
         return (
-            <Link to={prop.path} style={{
-                textDecoration:`none`
+            <Link key={key} to={prop.path} style={{
+                textDecoration: `none`
             }}>
                 <ListItem button>
                     <ListItemIcon>
@@ -108,9 +98,8 @@ function RoutesList(props) {
 
 class MiniDrawer extends React.Component {
     state = {
-        open: false,
+        open: false
     };
-
     handleDrawerOpen = () => {
         this.setState({ open: true });
     };
@@ -151,7 +140,7 @@ class MiniDrawer extends React.Component {
                 {
                     routes.map((section, key) => {
                         return (
-                            <List>
+                            <List key={key}>
                                 <RoutesList routes={section} />
                             </List>
                         );

@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import Background from './../../assets/images/bg1.jpg';
 
 import './AccessPanel.css'
