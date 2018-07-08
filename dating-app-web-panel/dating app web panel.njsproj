@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{e47d64e9-702d-46dd-b2b5-933ae31434dd}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>node_modules\react-scripts\bin\react-scripts.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -23,6 +23,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="src\assets\jss\globalStyles.jsx" />
+    <Compile Include="src\assets\routes\panelRoutes.jsx">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\components\Card\Card.jsx" />
     <Compile Include="src\components\Card\CardAvatar\CardAvatar.jsx" />
     <Compile Include="src\components\Card\CardAvatar\cardAvatarStyle.jsx" />
@@ -35,6 +38,9 @@
     <Compile Include="src\components\Card\CardIcon\CardIcon.jsx" />
     <Compile Include="src\components\Card\CardIcon\cardIconStyle.jsx" />
     <Compile Include="src\components\Card\cardStyle.jsx" />
+    <Compile Include="src\components\data.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\components\router\privateRoute.js" />
     <Compile Include="src\components\SimpleTable.js">
       <SubType>Code</SubType>
@@ -42,7 +48,7 @@
     <Compile Include="src\layouts\AccessPanel\AccessPanel.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\pages\HomePage\HomePage.js" />
+    <Compile Include="src\pages\DashboardPage\DashboardPage.js" />
     <Compile Include="src\pages\LoginPage\LoginPage.js" />
     <Compile Include="src\pages\MapPage\MapPage.js" />
     <Content Include="package.json" />
@@ -58,7 +64,7 @@
     <Compile Include="src\App.test.js" />
     <Compile Include="src\components\SideBar.js" />
     <Compile Include="src\index.js" />
-    <Compile Include="src\pages\Root.js">
+    <Compile Include="src\pages\Panel.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\pages\UsersPage\UsersPage.js">
@@ -75,6 +81,7 @@
     <Folder Include="src" />
     <Folder Include="src\assets\images\" />
     <Folder Include="src\assets\jss\" />
+    <Folder Include="src\assets\routes\" />
     <Folder Include="src\components\" />
     <Folder Include="src\components\Card\" />
     <Folder Include="src\components\Card\CardAvatar\" />
@@ -86,7 +93,7 @@
     <Folder Include="src\assets\" />
     <Folder Include="src\layouts\" />
     <Folder Include="src\pages\" />
-    <Folder Include="src\pages\HomePage\" />
+    <Folder Include="src\pages\DashboardPage\" />
     <Folder Include="src\pages\LoginPage\" />
     <Folder Include="src\pages\MapPage\" />
     <Folder Include="src\layouts\AccessPanel\" />
