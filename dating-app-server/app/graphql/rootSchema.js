@@ -6,13 +6,13 @@ const schema = new GraphQLSchema({
     query: new GraphQLObjectType({
         name: `Query`,
         fields: {
-            userLogIn,
             users
         }
     }),
     mutation: new GraphQLObjectType({
         name: `Mutation`,
         fields: {
+            userLogIn,
             userSignIn
         }
     })
