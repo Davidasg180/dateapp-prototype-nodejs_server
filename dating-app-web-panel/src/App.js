@@ -13,19 +13,17 @@ import LoginPage from './pages/LoginPage/LoginPage';
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <Switch>
-                    <Route
-                        exact
-                        path='/login'
-                        component={LoginPage}
-                    />
-                    <Route
-                        path='/'
-                        component={Root}
-                    />
-                </Switch>
-            </div>
+            <Switch>
+                <Route
+                    exact
+                    path='/login'
+                    component={LoginPage}
+                />
+                <Route
+                    path='/'
+                    component={Root}
+                />
+            </Switch>
         );
     }
 }
