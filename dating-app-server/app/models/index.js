@@ -37,7 +37,7 @@ if (CONFIG.db_host != '') {
         console.log(`
                 |==========================================|
                 |--------Connected to Mongodb Yays!--------|
-                |--------`+ `mongodb://localhost/` + CONFIG.db_name+`--------|
+                |------`+ `mongodb://localhost/` + CONFIG.db_name+`-----|
                 |==========================================|
         `);
     });
