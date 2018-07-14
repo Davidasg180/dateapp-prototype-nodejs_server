@@ -150,6 +150,7 @@ class MiniDrawer extends React.Component {
                 </div>
                 <Divider />
                 {
+
                     routes.map((section, key) => {
                         return (
                             <List key={key}>

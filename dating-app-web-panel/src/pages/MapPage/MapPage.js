@@ -71,7 +71,6 @@ class MapPage extends Component {
                 </Mutation>
                 <Query
                     query={GET_POINTS}
-                    pollInterval={500}
                     notifyOnNetworkStatusChange
                 >
                     {({ loading, error, data, refetch, networkStatus }) => {
@@ -87,7 +86,7 @@ class MapPage extends Component {
                             <div style={{ height: '100vh', width: '100%' }}>
                                 <button onClick={() => refetch()}>Refetch!</button>
                                 <GoogleMapReact
-                                    bootstrapURLKeys={{ key: "AIzaSyAIyzlkI6OuL4pAHIAqarKJTr8VSVBmmKE" }}
+                                    bootstrapURLKeys={{ key: "AIzaSyCpY6rxAaNqSaQLwprvPDnzCw-e-KsQEME" }}
                                     defaultCenter={{ lat: 32.502700, lng: -117.003710 }}
                                     defaultZoom={15}
                                     heatmapLibrary={true}

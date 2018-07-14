@@ -5,6 +5,7 @@ import PeopleOutline from "@material-ui/icons/PeopleOutline";
 import MapPage from "../pages/MapPage/MapPage";
 import UsersPage from "../pages/UsersPage/UsersPage";
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
+import FindLocatioPage from "../pages/FindLocatioPage/FindLocatioPage";
 
 const panelRoutes = [
     [
@@ -12,19 +13,29 @@ const panelRoutes = [
             path: "/",
             name: "Home",
             icon: Dashboard,
-            component: DashboardPage
+            component: DashboardPage,
+            exact: true
         },
         {
             path: "/users",
             name: "Users",
             icon: PeopleOutline,
-            component: UsersPage
+            component: UsersPage,
+            exact: false
         },
         {
             path: "/map",
             name: "Map",
             icon: LocationOn,
             component: MapPage,
+            exact: false,
+        },
+        {
+            path: "/findlocation",
+            name: "findlocation",
+            icon: LocationOn,
+            component: FindLocatioPage,
+            exact: false,
         }
     ]
 ]

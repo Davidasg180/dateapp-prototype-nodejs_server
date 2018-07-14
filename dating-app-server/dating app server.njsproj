@@ -6,6 +6,11 @@
     <Name>dating app server</Name>
     <RootNamespace>dateapp-prototype-nodejs_server</RootNamespace>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <ScriptArguments>
+    </ScriptArguments>
+    <NodeExeArguments>"C:\Users\David\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js" index.js</NodeExeArguments>
+    <NodeExePath>
+    </NodeExePath>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>

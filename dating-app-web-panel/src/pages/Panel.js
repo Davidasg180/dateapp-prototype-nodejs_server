@@ -5,10 +5,8 @@ import {
     Route
 } from "react-router-dom";
 
-import SideBar from '../components/SideBar';
-import UsersPage from './UsersPage/UsersPage';
-import MapPage from './MapPage/MapPage';
 import panelRoutes from '../routes/panelRoutes';
+import SideBar from '../components/SideBar';
 
 class Panel extends Component {
     constructor(props) {
@@ -24,17 +22,19 @@ class Panel extends Component {
                 overflow: `hidden`,
                 position: `relative`
             }}>
-                <SideBar routes={panelRoutes} />
+                <SideBar routes={panelRoutes}></SideBar>
                 <main>
                     <Switch>
-                        <Route
-                            path='/users'
-                            component={UsersPage}
-                        />
-                        <Route
-                            path='/map'
-                            component={MapPage}
-                        />
+                        {
+                            panelRoutes[0].map((route, key) => {
+                                return (<Route
+                                    exact={route.exact}
+                                    key={key}
+                                    path={route.path}
+                                    component={route.component}
+                                />)
+                            })
+                        }
                     </Switch>
                 </main>
             </div>
