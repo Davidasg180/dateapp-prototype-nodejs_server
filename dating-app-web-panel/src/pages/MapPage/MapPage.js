@@ -14,19 +14,6 @@ const GET_POINTS = gql`
   }
 `;
 
-class autoInsertPoint extends React.Component {
-    componentDidMount() {
-        this.props.execute()
-    }
-
-    render() {
-        // React 16
-        return this.props.children
-        // Old School :)
-        // return <div>{ this.props.children }</div>
-    }
-}
-
 class MapPage extends Component {
     constructor(props) {
         super(props);
@@ -91,7 +78,7 @@ class MapPage extends Component {
                         if (networkStatus === 4) return "Refetching!";
                         let heatMapData = this.mapdataplz(data)
                         console.log(this.props);
-                        if (this.state.heatMapData.length != heatMapData.length) {
+                        if (this.state.heatMapData.length !== heatMapData.length) {
                             this.setState({ heatMapData });
                             refetch()
                         }

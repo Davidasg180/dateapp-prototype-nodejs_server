@@ -22,5 +22,4 @@ users = {
     }
 }
 
-
 module.exports = users;
