@@ -50,17 +50,23 @@ userSignIn = {
         },
         password: {
             type: GraphQLString
+        },
+        first_name: {
+            type: GraphQLString
+        },
+        last_name: {
+            type: GraphQLString
+        },
+        gender: {
+            type: GraphQLString
         }
     },
 
     resolve: (root, args) => {
 
-        let userData = {
-            email: args.email,
-            password: bcrypt.hashSync(args.password, 10)
-        }
+        args.password = bcrypt.hashSync(args.password, 10)
 
-        return User.create(userData).then(user => {
+        return User.create(args).then(user => {
 
             let token = jwt.sign({ id: user._id }, CONFIG.jwt_encryption, {
                 expiresIn: CONFIG.jwt_expiration

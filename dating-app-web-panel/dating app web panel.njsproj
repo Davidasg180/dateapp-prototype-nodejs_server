@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="src\assets\jss\globalStyles.jsx" />
     <Compile Include="src\pages\FindLocatioPage\FindLocatioPage.js" />
+    <Compile Include="src\pages\ResMapPage\ResMapPage.js" />
     <Compile Include="src\routes\panelRoutes.jsx">
       <SubType>Code</SubType>
     </Compile>
@@ -80,6 +81,7 @@
     <Folder Include="src\assets\images\" />
     <Folder Include="src\assets\jss\" />
     <Folder Include="src\pages\FindLocatioPage\" />
+    <Folder Include="src\pages\ResMapPage\" />
     <Folder Include="src\routes\" />
     <Folder Include="src\components\" />
     <Folder Include="src\components\Card\" />

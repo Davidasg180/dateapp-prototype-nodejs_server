@@ -8,7 +8,10 @@ let userType = new GraphQLObjectType({
         password: {
             type: GraphQLString,
             resolve: () => null
-        }
+        },
+        first_name: { type: GraphQLString },
+        last_name: { type: GraphQLString },
+        gender: { type: GraphQLString },
     },
 
 });

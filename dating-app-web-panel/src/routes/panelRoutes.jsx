@@ -6,6 +6,7 @@ import MapPage from "../pages/MapPage/MapPage";
 import UsersPage from "../pages/UsersPage/UsersPage";
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
 import FindLocatioPage from "../pages/FindLocatioPage/FindLocatioPage";
+import ResMapPage from "../pages/ResMapPage/ResMapPage";
 
 const panelRoutes = [
     [
@@ -35,6 +36,13 @@ const panelRoutes = [
             name: "findlocation",
             icon: LocationOn,
             component: FindLocatioPage,
+            exact: false,
+        },
+        {
+            path: "/ResMapPage",
+            name: "ResMapPage",
+            icon: LocationOn,
+            component: ResMapPage,
             exact: false,
         }
     ]
