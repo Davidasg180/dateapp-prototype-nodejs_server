@@ -16,8 +16,6 @@ users = {
     },
 
     resolve: (root, args, context) => {
-        console.log(`resolve: users`);
-        console.log(context.request.headers.authorization);
         return User.find();
     }
 }

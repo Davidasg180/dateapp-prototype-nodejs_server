@@ -37,12 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\graphql\objects\auth.obj.js" />
+    <Compile Include="app\graphql\objects\date.obj.js" />
     <Compile Include="app\graphql\objects\user.obj.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\graphql\types\auth.type.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\graphql\types\date.type.js" />
+    <Compile Include="app\graphql\types\place.type.js" />
     <Compile Include="app\models\date.model.js" />
     <Compile Include="app\models\offer.model.js" />
     <Compile Include="app\models\place.model.js">
